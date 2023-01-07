@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+    <div class="class1">
+        <form >
+        <div class="class2"> 
+        <input type="text" id="id1">
+        <label for="id1">Votre Nom </label>
+        </div>
+        <div class="class2"> 
+        <input type="text" id="id2">
+        <label for="id2">Votre Prénom </label>
+        </div>
+        <div class="class2"> 
+        <input type="text" id="id3">
+        <label for="id3">Email</label>
+        </div>
+        <div class="class2"> 
+        <input type="text" id="id4">
+        <label for="id4">Numéro De Téléphone</label>
+        </div> 
+        <div class="class2"> 
+            <textarea rows="8" id="id5"></textarea>
+            <label for="id5">Vos Commentaires</label>
+        </div>
+        <input type="button" value="valider" id="id6" onclick="checkForm()">
+        </form>
+        <script>
+            function checkForm() {
+  // Récupère tous les champs de formulaire
+  const fields = document.querySelectorAll('form input, form textarea, form select');
+
+  // Vérifie si tous les champs sont remplis
+  let allFieldsFilled = true;
+  fields.forEach(field => {
+    if (field.value === '') {
+      allFieldsFilled = false;
+    }
+  });
+
+  // Affiche un message d'alerte en fonction de la vérification
+  if (allFieldsFilled) {
+    alert('Votre demande a été enregistrée');
+  } else {
+    alert('Veuillez remplir tous les champs');
+  }
+ 
+  }
+
+        </script>
+        
+    </div>
+    
+</body>
+</html>
